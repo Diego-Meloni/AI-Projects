@@ -10,44 +10,33 @@ The objective of this project is to build a classifier that detects the **tone o
 -  **Sarcastic**
 -  **Figurative** (both ironic and sarcastic)
 
+During the project we encountered many challenges and problems of different nature:
+- Tweets contain internet slang, hashtags (united words with no separating space), mentions, urls and emojis.
+- Resources constraints: Since we needed to make our project using Google Colab, we had to avoid heavy datasets and dictionaries, and even our models and embedding had to be limited to make the project run better.
+- Libraries conflict: Google Colab comes with some preinstalled libraries, but at some point the versions in some of these libraries are in conflict, 
+so in order to run the last part of the code you need to restart the session and to launch the first part until after the data preprocessing, to then directly use the transformers part for the LLM prompting. 
+- The very nature of the dataset: There is no clear cut distinction between irony, sarcasm, and when they are both applied.
+  The line is blurry even for humans, and the classification could contain biases caused by subjectivity.
+
 Further considerations about the project and the dataset can be found in the notebook and in the reports.
 
 ---
 
 ## Requirements
-
-- A **Google Account** (for Google Colab and Google Drive)
-- **Dataset** from Kaggle:  
+The notebook is self containted, meaning it is possible to directly run it without doing setup procedures or downloading unnecessary files.
+- **Dataset** from Kaggle (loaded from GitHub):  
   [Tweets with Sarcasm and Irony](https://www.kaggle.com/datasets/nikhiljohnk/tweets-with-sarcasm-and-irony)
 - **Pre-trained LLM:** [Microsoft Phi-3-mini-128k-instruct](https://huggingface.co/microsoft/Phi-3-mini-128k-instruct)
 
 >  **Note:** The Phi-3 model is automatically downloaded the first time the program is executed.  
-> You don’t need to download it manually — doing so might even cause conflicts.
-
----
-
-## Dataset Setup
-
-We use **Google Drive** to import the dataset during runtime in Google Colab.
-
-### Steps:
-1. Create a folder in your Google Drive named **exactly**: "Text Mining project"
-2. 2. Download the dataset from Kaggle.
-3. Place the files inside that folder with the following names:
-- `train.csv` (training set)
-- `test.csv` (test set)
-
-The project code automatically accesses the dataset from:
-/content/drive/MyDrive/Text Mining project/train.csv
-/content/drive/MyDrive/Text Mining project/test.csv
-
+> You don’t need to download it manually
 
 ---
 
 ##  Library Installation
 
 Google Colab already includes many preinstalled libraries (like `tensorflow` and `scikit-learn`),  
-but you still need to install the following:
+but you some still need to be installed to run the project:
 
 ```bash
 !pip install bitsandbytes --prefer-binary
@@ -58,3 +47,6 @@ but you still need to install the following:
 ```
 > Important: After installing transformers, restart the Colab runtime.
 > This version may have limited compatibility with certain libraries.
+
+---
+
