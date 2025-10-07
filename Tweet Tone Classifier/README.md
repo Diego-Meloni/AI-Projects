@@ -56,5 +56,5 @@ but you still need to install the following:
 !pip install gensim
 !pip install transformers==4.48.0
 ```
-Important: After installing transformers, restart the Colab runtime.
-This version may have limited compatibility with certain libraries.
+> Important: After installing transformers, restart the Colab runtime.
+> This version may have limited compatibility with certain libraries.
