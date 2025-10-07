@@ -23,9 +23,8 @@ Further considerations about the project and the dataset can be found in the not
 ---
 
 ## Requirements
-The notebook is self containted, meaning it is possible to directly run it without doing setup procedures or downloading unnecessary files.
-- **Dataset** from Kaggle (loaded from GitHub):  
-  [Tweets with Sarcasm and Irony](https://www.kaggle.com/datasets/nikhiljohnk/tweets-with-sarcasm-and-irony)
+The notebook is self containted, meaning it is possible to directly run it without doing setup procedures or downloading unnecessary files. Here are some useful links
+- **Dataset** from Kaggle (loaded from GitHub):  [Tweets with Sarcasm and Irony](https://www.kaggle.com/datasets/nikhiljohnk/tweets-with-sarcasm-and-irony)
 - **Pre-trained LLM:** [Microsoft Phi-3-mini-128k-instruct](https://huggingface.co/microsoft/Phi-3-mini-128k-instruct)
 
 >  **Note:** The Phi-3 model is automatically downloaded the first time the program is executed.  
